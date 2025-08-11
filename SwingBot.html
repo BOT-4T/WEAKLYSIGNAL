@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Signal du Lundi — Bot Swing Crypto</title>
+  <meta name="description" content="Landing simple et efficace pour un bot swing crypto : un signal chaque lundi à 09:00 (heure de Paris). Résultats 2025, tarifs, FAQ, CTA Telegram." />
+  <meta property="og:title" content="Signal du Lundi — SwingTrading Crypto" />
+  <meta property="og:description" content="Un seul signal par semaine (lundi). Résultats 2025. Paiement en crypto. Contact via Telegram @HUSTONCRYPTO." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230ea5e9'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { DEFAULT: '#0ea5e9', dark: '#0284c7' } },
+          boxShadow: { soft: '0 10px 30px rgba(2, 132, 199, 0.15)' }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    .glass { backdrop-filter: blur(8px); background: rgba(15,23,42,.6); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand/20 selection:text-brand-900">
+
+  <!-- Navbar minimal -->
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="font-semibold tracking-tight">Signal du Lundi</a>
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#features" class="hover:text-brand">Fonctionnalités</a>
+        <a href="#proof" class="hover:text-brand">Résultats 2025</a>
+        <a href="#pricing" class="hover:text-brand">Tarifs</a>
+        <a href="#faq" class="hover:text-brand">FAQ</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="p-2 rounded-lg border border-slate-200 hover:bg-slate-100" aria-label="Basculer le thème">🌙</button>
+        <a href="#cta" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2 font-medium text-white shadow-soft hover:bg-brand-dark">Me contacter</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative pt-28 pb-16 overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <svg aria-hidden="true" class="absolute left-1/2 -translate-x-1/2 -top-20" width="1200" height="600" viewBox="0 0 1200 600" fill="none">
+        <ellipse cx="600" cy="300" rx="600" ry="300" fill="url(#g)" fill-opacity="0.25"/>
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0ea5e9"/>
+            <stop offset="100%" stop-color="#22c55e"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-white/70 px-3 py-1 text-xs font-medium text-brand shadow-soft">Signal du lundi • Swing weekly • Non-custodial</span>
+          <h1 class="mt-6 text-4xl sm:text-5xl font-extrabold tracking-tight">
+            Bot Swing Trading Crypto : <span class="text-brand">un signal le lundi</span>
+          </h1>
+          <p class="mt-4 text-slate-600 text-lg leading-relaxed">
+            Un seul signal swing par semaine (lundi 09:00, heure de Paris) : acheter ou ne rien faire.
+            Brief quotidien optionnel pour se préparer/éviter.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#pricing" class="inline-flex items-center justify-center rounded-xl bg-brand px-5 py-3 text-white font-semibold shadow-soft hover:bg-brand-dark">Choisir une offre</a>
+            <a href="#proof" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-medium hover:bg-white">Résultats 2025</a>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-sm text-slate-600">
+            <div class="flex -space-x-2">
+              <img alt="avatar 1" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://api.dicebear.com/9.x/identicon/svg?seed=a" />
+              <img alt="avatar 2" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://api.dicebear.com/9.x/identicon/svg?seed=b" />
+              <img alt="avatar 3" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://api.dicebear.com/9.x/identicon/svg?seed=c" />
+            </div>
+            <p><span class="font-semibold">+250</span> utilisateurs</p>
+          </div>
+          <div class="mt-4 rounded-xl border border-slate-200 bg-white/80 p-4 shadow-soft">
+            <p class="text-sm text-slate-600">Prochain signal</p>
+            <p class="mt-1 font-semibold" id="nextSignalDate">Calcul…</p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="rounded-2xl border border-slate-200 bg-white shadow-soft p-4">
+            <div class="aspect-[16/10] rounded-xl bg-slate-900 text-slate-200 p-4 font-mono text-xs overflow-auto">
+              <p class="opacity-70"># Exemple de message Telegram</p>
+              <pre class="whitespace-pre-wrap">[BOT] Swing Lundi
+Semaine: 2025-08-11
+Actif: BTC/USDT
+Décision: ACHETER (ou RIEN FAIRE)
+Entrée: 106 870
+Brief quotidien: Préparer achat si signal vert
+
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 bg-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight">Fonctionnalités</h2>
+      <p class="mt-2 text-slate-600">Clair, simple, orienté résultat.</p>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 p-6 bg-white">
+          <h3 class="font-semibold">Track record clair</h3>
+          <p class="mt-2 text-slate-600">Equity curve et périodes de creux affichées..</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 bg-white">
+          <h3 class="font-semibold">Gestion du risque</h3>
+          <p class="mt-2 text-slate-600">SL/TP, sizing auto, kill switch quotidien et mensuel.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 bg-white">
+          <h3 class="font-semibold">Cadence hebdo claire</h3>
+          <p class="mt-2 text-slate-600">Un seul signal par semaine, lundi 09:00 (Paris). Pas de spam.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 bg-white">
+          <h3 class="font-semibold">Support</h3>
+          <p class="mt-2 text-slate-600">Installation assistée et FAQ détaillée.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 bg-white">
+          <h3 class="font-semibold">Paiements</h3>
+          <p class="mt-2 text-slate-600">Crypto (USDT/USDC).</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 bg-white">
+          <h3 class="font-semibold">Non-custodial</h3>
+          <p class="mt-2 text-slate-600">Vos clients gardent leurs API. Pas de garde de fonds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section id="proof" class="py-16 bg-slate-50">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight">Résultats 2025 — WeeklySignal</h2>
+        <p class="mt-2 text-slate-600">Résultats du 03 jan. 2025 au 11 août 2025 (UTC).</p>
+      </div>
+      <a href="#cta" class="hidden sm:inline-flex rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-white">Me contacter</a>
+    </div>
+
+    <!-- BTC -->
+    <div class="mt-12 grid md:grid-cols-2 gap-6 items-stretch">
+      <!-- Résumé perf BTC -->
+      <div class="flex h-full flex-col min-h-[360px] rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">BTC — Résumé des performances</h3>
+          <span class="text-xs rounded-full px-2 py-1 bg-slate-100">7 trades</span>
+        </div>
+
+        <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Return total</div>
+            <div class="text-lg font-semibold">+13.62%</div>
+            <div class="text-xs text-slate-500">Ann. ≈ 23.47% • CAGR 23.54%</div>
+          </div>
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Buy &amp; Hold</div>
+            <div class="text-lg font-semibold">+23.67%</div>
+            <div class="text-xs text-slate-500">Beta 0.27 • Alpha +7.30%</div>
+          </div>
+
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Risque</div>
+            <div class="text-lg font-semibold">DD max −15.39%</div>
+            <div class="text-xs text-slate-500">Vol ann. 22.71% • Calmar 1.53</div>
+          </div>
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Ratios</div>
+            <div class="text-lg font-semibold">Sharpe 1.03</div>
+            <div class="text-xs text-slate-500">Sortino 2.23 • PF 3.26</div>
+          </div>
+
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Qualité d’exécution</div>
+            <div class="text-lg font-semibold">Expectancy +3.33%</div>
+            <div class="text-xs text-slate-500">Win rate 42.86% • Kelly 0.28</div>
+          </div>
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Exposition</div>
+            <div class="text-lg font-semibold">54.09%</div>
+            <div class="text-xs text-slate-500">Durée moy. trade 17 j • max 49 j</div>
+          </div>
+        </div>
+
+        <div class="mt-4 text-xs text-slate-500">
+          Start: 2025-01-03 • End: 2025-08-11 • Commissions: $2 832.75<br>
+          Best trade +24.56% • Worst trade −4.07% • SQN 0.83
+        </div>
+      </div>
+
+      <!-- Journal BTC -->
+      <div class="flex h-full flex-col min-h-[360px] rounded-xl border border-slate-200 bg-white p-6">
+        <h3 class="font-semibold">Journal des signaux (hebdo, lundi 08:00 Paris)</h3>
+        <div class="mt-3 max-h-64 overflow-auto rounded-lg bg-slate-50 p-3 font-mono text-xs leading-6 flex-1">
+<pre class="whitespace-pre-wrap">2025-01-20 • BUY
+2025-01-27 • SELL
+2025-02-17 • BUY
+2025-03-03 • SELL
+2025-03-17 • BUY
+2025-03-31 • SELL
+2025-04-14 • BUY
+2025-06-02 • SELL
+2025-06-09 • BUY
+2025-06-16 • SELL
+2025-06-30 • BUY
+2025-07-21 • SELL
+2025-07-28 • BUY
+2025-08-04 • SELL
+2025-08-11 • BUY</pre>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">
+          
+        </p>
+      </div>
+    </div>
+
+    <!-- ETH -->
+    <div class="mt-8 grid md:grid-cols-2 gap-6 items-stretch">
+      <!-- Résumé perf ETH -->
+      <div class="flex h-full flex-col min-h-[360px] rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">ETH — Résumé des performances</h3>
+          <span class="text-xs rounded-full px-2 py-1 bg-slate-100">6 trades</span>
+        </div>
+
+        <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Return total</div>
+            <div class="text-lg font-semibold">+49.51%</div>
+            <div class="text-xs text-slate-500">Ann. ≈ 94.31% • CAGR 94.65%</div>
+          </div>
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Buy &amp; Hold</div>
+            <div class="text-lg font-semibold">+23.34%</div>
+            <div class="text-xs text-slate-500">Beta 0.40 • Alpha +40.21%</div>
+          </div>
+
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Risque</div>
+            <div class="text-lg font-semibold">DD max −25.96%</div>
+            <div class="text-xs text-slate-500">Vol ann. 113.62% • Calmar 3.63</div>
+          </div>
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Ratios</div>
+            <div class="text-lg font-semibold">Sharpe 0.83</div>
+            <div class="text-xs text-slate-500">Sortino 3.47 • PF 2.75</div>
+          </div>
+
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Qualité d’exécution</div>
+            <div class="text-lg font-semibold">Expectancy +9.69%</div>
+            <div class="text-xs text-slate-500">Win rate 33.33% • Kelly 0.19</div>
+          </div>
+          <div class="rounded-lg bg-slate-50 p-3">
+            <div class="text-slate-500">Exposition</div>
+            <div class="text-lg font-semibold">47.73%</div>
+            <div class="text-xs text-slate-500">Durée moy. trade 17 j 12 h • max 35 j</div>
+          </div>
+        </div>
+
+        <div class="mt-4 text-xs text-slate-500">
+          Start: 2025-01-03 • End: 2025-08-11 • Commissions: $3 883.64<br>
+          Best trade +51.10% • Worst trade −12.32% • SQN 0.75
+        </div>
+      </div>
+
+      <!-- Journal ETH -->
+      <div class="flex h-full flex-col min-h-[360px] rounded-xl border border-slate-200 bg-white p-6">
+        <h3 class="font-semibold">Journal des signaux (hebdo, lundi 08:00 Paris)</h3>
+        <div class="mt-3 max-h-64 overflow-auto rounded-lg bg-slate-50 p-3 font-mono text-xs leading-6 flex-1">
+<pre class="whitespace-pre-wrap">
+2025-02-17 • BUY  
+2025-03-03 • SELL 
+2025-03-24 • BUY  
+2025-03-31 • SELL 
+2025-04-14 • BUY  
+2025-05-19 • SELL 
+2025-05-26 • BUY  
+2025-06-02 • SELL 
+2025-06-16 • BUY  
+2025-06-23 • SELL 
+2025-06-30 • BUY  
+2025-08-04 • SELL 
+2025-08-11 • BUY  </pre>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">
+          
+      </div>
+    </div>
+
+    <!-- Méthode -->
+    <p class="mt-8 text-xs text-slate-500">
+      Méthode : prix spot USD, semaines alignées sur <strong>lundi 08:00 (Europe/Paris)</strong>. Fees = 0.1% par trade (spot).
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-16 bg-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight">Tarifs </h2>
+      
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- Starter -->
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="text-lg font-semibold">Starter</h3>
+          <p class="mt-1 text-slate-600">Signaux uniquement</p>
+          <p class="mt-4 text-4xl font-extrabold">24.99€<span class="text-base font-medium text-slate-500">/mois</span></p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-2">
+            <li>• 1 signal chaque lundi</li>
+            <li>• 1 paire (BTC)</li>
+            <li>• Accès au canal infos</li>
+          </ul>
+          <a href="#cta" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-4 py-2 font-medium text-white hover:opacity-90">Me contacter</a>
+        </div>
+        <!-- Pro -->
+        <div class="rounded-2xl border-2 border-brand p-6 shadow-soft">
+          <div class="inline-flex items-center rounded-full bg-brand/10 px-2 py-0.5 text-xs font-semibold text-brand">Populaire</div>
+          <h3 class="mt-2 text-lg font-semibold">Pro</h3>
+          <p class="mt-1 text-slate-600">Script + Signaux</p>
+          <p class="mt-4 text-4xl font-extrabold">39.99€<span class="text-base font-medium text-slate-500">/mois</span></p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-2">
+            <li>• Script complet + guide</li>
+            <li>• Signaux (BTC/ETH)</li>
+            <li>• Brief quotidien + kill switch</li>
+          </ul>
+          <a href="#cta" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-brand px-4 py-2 font-semibold text-white hover:bg-brand-dark">Obtenir Pro</a>
+        </div>
+        <!-- Lifetime -->
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="text-lg font-semibold">À vie</h3>
+          <p class="mt-1 text-slate-600">Script + Signaux (perpétuel)</p>
+          <p class="mt-4 text-4xl font-extrabold">249.99€</p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-2">
+            <li>• Licence perpétuelle (script avec une connexion à ton exchange via ccxt)</li>
+            <li>• Kill Switch (modifiable)</li>
+            <li>• Mises à jour 12 mois / Support pour ton installation</li>
+
+          </ul>
+          <a href="#cta" class="mt-6 inline-flex w-full items-center justify-center rounded-xl border border-slate-300 px-4 py-2 font-medium hover:bg-white">Acheter</a>
+        </div>
+    </div>
+  </section>
+
+
+
+    
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight">FAQ</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Comment est généré le signal ?</h3>
+          <p class="mt-2 text-slate-600">Chaque lundi à 08:00 (heure de Paris), si le prix est <strong>au-dessus du plus haut du lundi précédent</strong>, on entre long pour la semaine. Sinon, <em>rien à faire</em>. Sortie le lundi suivant 08:00.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Et s’il n’y a pas de signal ?</h3>
+          <p class="mt-2 text-slate-600">On reste cash → rendement de la semaine = 0%. Pas de positions forcées.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Levier ?</h3>
+          <p class="mt-2 text-slate-600">Non requis. Levier optionnel à vos risques. Gestion du risque côté bot.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Fuseau horaire</h3>
+          <p class="mt-2 text-slate-600">Synchronisé sur <strong>Europe/Paris</strong> (CET/CEST). Semaines = lundi 08:00 → lundi 08:00.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Telegram uniquement -->
+  <section id="cta" class="py-16 bg-slate-900 text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl font-bold">Contact direct Telegram</h2>
+          <p class="mt-2 text-slate-300">DM pour recevoir l’offre, les résultats détaillés et le guide d’installation.</p>
+          <ul class="mt-4 text-slate-300 space-y-2 text-sm">
+            <li>• Paiement en USDT/USDC (réseau au choix)</li>
+            <li>• Livraison immédiate (fichiers + accès au canal)</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://t.me/HUSTONCRYPTO" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 font-semibold text-white hover:bg-brand-dark">Ouvrir Telegram @HUSTONCRYPTO</a>
+            <button id="copyHandle" class="inline-flex items-center justify-center rounded-xl border border-white/30 px-4 py-2 font-medium hover:bg-white/10">Copier @HUSTONCRYPTO</button>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white p-4 text-slate-900">
+          <!-- Place le fichier 'telegram.png' à côté de ce HTML -->
+          <img src="telegram.png" alt="QR Telegram @HUSTONCRYPTO" class="w-full h-auto rounded-xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 bg-white border-t border-slate-200 text-slate-600">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <p>© <span id="year"></span> Signal du Lundi — Tous droits réservés.</p>
+      <p>Mentions : ce site ne constitue pas un conseil en investissement. Les performances passées ne préjugent pas des performances futures.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Thème + Date prochain lundi (09:00 Europe/Paris) + année footer + copier handle
+    (function(){
+      const btn = document.getElementById('themeToggle');
+      btn && btn.addEventListener('click', () => document.documentElement.classList.toggle('dark'));
+
+      function nextMondayParis(){
+        const nowParis = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Paris' }));
+        const day = nowParis.getDay(); // 0=Dim, 1=Lun
+        let diff = (1 - day + 7) % 7;
+        const candidate = new Date(nowParis);
+        candidate.setDate(nowParis.getDate() + diff);
+        candidate.setHours(9,0,0,0); // 09:00
+        if (diff === 0 && nowParis.getTime() >= candidate.getTime()) {
+          candidate.setDate(candidate.getDate() + 7);
+        }
+        const fmt = new Intl.DateTimeFormat('fr-FR', {
+          weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+          hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Paris'
+        });
+        return fmt.format(candidate) + ' (heure Paris)';
+      }
+
+      const nextEl = document.getElementById('nextSignalDate');
+      if (nextEl) nextEl.textContent = nextMondayParis();
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const copyBtn = document.getElementById('copyHandle');
+      copyBtn && copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText('@HUSTONCRYPTO');
+          copyBtn.textContent = 'Copié ✅';
+          setTimeout(()=>copyBtn.textContent='Copier @HUSTONCRYPTO', 1500);
+        } catch(e) {
+          copyBtn.textContent = 'Impossible de copier';
+          setTimeout(()=>copyBtn.textContent='Copier @HUSTONCRYPTO', 1500);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
